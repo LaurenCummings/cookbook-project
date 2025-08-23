@@ -7,6 +7,8 @@ dotenv.config();
 
 const app = express();
 
+app.use(express.json());
+
 app.get("/api/recipes", (req, res) => {
   res.send("Here are the recipes");
 });
