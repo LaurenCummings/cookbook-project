@@ -5,6 +5,8 @@ dotenv.config();
 
 const app = express();
 
+console.log(process.env.MONGO_URI);
+
 app.get("/recipes", (req, res) => {
   res.send("Here are the recipes");
 });
