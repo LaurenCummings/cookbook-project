@@ -5,8 +5,8 @@ dotenv.config();
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Server is ready");
+app.get("/recipes", (req, res) => {
+  res.send("Here are the recipes");
 });
 
 app.listen(5000, () => {
