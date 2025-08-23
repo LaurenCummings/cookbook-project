@@ -7,11 +7,11 @@ dotenv.config();
 
 const app = express();
 
-app.get("/recipes", (req, res) => {
+app.get("/api/recipes", (req, res) => {
   res.send("Here are the recipes");
 });
 
-app.post("/recipes", async (req, res) => {
+app.post("/api/recipes", async (req, res) => {
   const recipe = req.body;
 
   if (!recipe.name || !recipe.ingredients || !recipe.instructions) {
