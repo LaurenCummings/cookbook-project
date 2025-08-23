@@ -6,6 +6,10 @@ const recipeSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    dishType: {
+      type: String,
+      required: false,
+    },
     time: {
       type: String,
       required: false,
