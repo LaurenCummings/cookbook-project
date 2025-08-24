@@ -1,30 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
 import Recipe from "./models/recipe.model.js";
+import { getRecipes } from "../controllers/recipe.controller.js";
 
 const router = express.Router();
 
 router.get("/", getRecipes);
 
-router.post("/", async (req, res) => {
-  const recipe = req.body;
-
-  if (!recipe.name || !recipe.ingredients || !recipe.instructions) {
-    return res
-      .status(400)
-      .json({ success: false, message: "Please provide all fields" });
-  }
-
-  const newRecipe = new Recipe(recipe);
-
-  try {
-    await newRecipe.save();
-    res.status(201).json({ success: true, data: newRecipe });
-  } catch (error) {
-    console.error("Error in Create recipe:", error.message);
-    res.status(500).json({ success: false, message: "Server Error" });
-  }
-});
+router.post("/", createRecipe);
 
 router.put("/:id", async (req, res) => {
   const { id } = req.params;
