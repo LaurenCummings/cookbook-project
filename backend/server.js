@@ -39,6 +39,19 @@ app.post("/api/recipes", async (req, res) => {
   }
 });
 
+app.put("/api/products/:id", async (req, res) => {
+  const { id } = req.params;
+
+  const recipe = req.body;
+
+  try {
+    const updatedRecipe = await Recipe.findByIdAndUpdate(id, recipe, {
+      new: true,
+    });
+    res.status(200).json({ success: true, data: updatedRecipe });
+  } catch (error) {}
+});
+
 app.delete("/api/recipes/:id", async (req, res) => {
   const { id } = req.params;
 
