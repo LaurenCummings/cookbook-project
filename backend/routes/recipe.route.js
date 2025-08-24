@@ -1,6 +1,5 @@
 import express from "express";
-import mongoose from "mongoose";
-import Recipe from "./models/recipe.model.js";
+
 import {
   getRecipes,
   createRecipe,
