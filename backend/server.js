@@ -35,7 +35,9 @@ app.post("/api/recipes", async (req, res) => {
 
 app.delete("/api/products/:id", async (req, res) => {
   const { id } = req.params;
-  console.log("id", id);
+
+  try {
+  } catch (error) {}
 });
 
 app.listen(5000, () => {
