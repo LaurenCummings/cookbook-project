@@ -33,10 +33,12 @@ app.post("/api/recipes", async (req, res) => {
   }
 });
 
-app.delete("/api/products/:id", async (req, res) => {
+app.delete("/api/recipes/:id", async (req, res) => {
   const { id } = req.params;
 
   try {
+    await Recipe.findByIdAndDelete(id);
+    res.status(200).json({ success: true, message: "Recipe deleted" });
   } catch (error) {}
 });
 
