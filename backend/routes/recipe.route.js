@@ -4,7 +4,7 @@ import Recipe from "./models/recipe.model.js";
 
 const router = express.Router();
 
-router.get("/api/recipes", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const recipes = await Recipe.find({});
     res.status(200).json({ success: true, data: recipes });
@@ -14,7 +14,7 @@ router.get("/api/recipes", async (req, res) => {
   }
 });
 
-router.post("/api/recipes", async (req, res) => {
+router.post("/", async (req, res) => {
   const recipe = req.body;
 
   if (!recipe.name || !recipe.ingredients || !recipe.instructions) {
@@ -34,7 +34,7 @@ router.post("/api/recipes", async (req, res) => {
   }
 });
 
-router.put("/api/recipes/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
   const { id } = req.params;
 
   const recipe = req.body;
@@ -55,7 +55,7 @@ router.put("/api/recipes/:id", async (req, res) => {
   }
 });
 
-router.delete("/api/recipes/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const { id } = req.params;
 
   try {
