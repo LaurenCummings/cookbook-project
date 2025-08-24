@@ -39,7 +39,9 @@ app.delete("/api/recipes/:id", async (req, res) => {
   try {
     await Recipe.findByIdAndDelete(id);
     res.status(200).json({ success: true, message: "Recipe deleted" });
-  } catch (error) {}
+  } catch (error) {
+    res.status(404).json({ success: false, message: "Product not found" });
+  }
 });
 
 app.listen(5000, () => {
