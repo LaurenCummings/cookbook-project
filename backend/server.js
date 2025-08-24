@@ -13,7 +13,10 @@ app.get("/api/recipes", async (req, res) => {
   try {
     const recipes = await Recipe.find({});
     res.status(200).json({ success: true, data: recipes });
-  } catch (error) {}
+  } catch (error) {
+    console.log("error is fetching products:", error.message);
+    res.status(500).json({ success: false, message: "Server Error" });
+  }
 });
 
 app.post("/api/recipes", async (req, res) => {
