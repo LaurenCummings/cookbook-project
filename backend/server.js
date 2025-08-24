@@ -39,7 +39,7 @@ app.post("/api/recipes", async (req, res) => {
   }
 });
 
-app.put("/api/products/:id", async (req, res) => {
+app.put("/api/recipes/:id", async (req, res) => {
   const { id } = req.params;
 
   const recipe = req.body;
