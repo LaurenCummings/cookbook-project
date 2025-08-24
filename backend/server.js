@@ -44,12 +44,20 @@ app.put("/api/products/:id", async (req, res) => {
 
   const recipe = req.body;
 
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res
+      .status(404)
+      .json({ success: false, message: "Invalid Recipe Id" });
+  }
+
   try {
     const updatedRecipe = await Recipe.findByIdAndUpdate(id, recipe, {
       new: true,
     });
     res.status(200).json({ success: true, data: updatedRecipe });
-  } catch (error) {}
+  } catch (error) {
+    res.status(404).json({ success: false, message: "Server Error" });
+  }
 });
 
 app.delete("/api/recipes/:id", async (req, res) => {
