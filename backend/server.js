@@ -14,7 +14,7 @@ app.get("/api/recipes", async (req, res) => {
     const recipes = await Recipe.find({});
     res.status(200).json({ success: true, data: recipes });
   } catch (error) {
-    console.log("error is fetching products:", error.message);
+    console.log("error is fetching recipes:", error.message);
     res.status(500).json({ success: false, message: "Server Error" });
   }
 });
@@ -46,7 +46,8 @@ app.delete("/api/recipes/:id", async (req, res) => {
     await Recipe.findByIdAndDelete(id);
     res.status(200).json({ success: true, message: "Recipe deleted" });
   } catch (error) {
-    res.status(404).json({ success: false, message: "Product not found" });
+    console.error("error in deleting recipe:", error.message);
+    res.status(404).json({ success: false, message: "Recipe not found" });
   }
 });
 
