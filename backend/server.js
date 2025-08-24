@@ -9,8 +9,11 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/api/recipes", (req, res) => {
-  res.send("Here are the recipes");
+app.get("/api/recipes", async (req, res) => {
+  try {
+    const recipes = await Recipe.find({});
+    res.status(200).json({ success: true, data: recipes });
+  } catch (error) {}
 });
 
 app.post("/api/recipes", async (req, res) => {
