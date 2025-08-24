@@ -4,15 +4,7 @@ import Recipe from "./models/recipe.model.js";
 
 const router = express.Router();
 
-router.get("/", async (req, res) => {
-  try {
-    const recipes = await Recipe.find({});
-    res.status(200).json({ success: true, data: recipes });
-  } catch (error) {
-    console.log("error is fetching recipes:", error.message);
-    res.status(500).json({ success: false, message: "Server Error" });
-  }
-});
+router.get("/", getRecipes);
 
 router.post("/", async (req, res) => {
   const recipe = req.body;
