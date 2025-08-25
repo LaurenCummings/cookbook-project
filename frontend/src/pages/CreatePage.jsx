@@ -6,6 +6,7 @@ import {
   Box,
   useColorModeValue,
   Input,
+  Button,
 } from "@chakra-ui/react";
 
 const CreatePage = () => {
@@ -14,6 +15,11 @@ const CreatePage = () => {
     ingredients: "",
     instructions: "",
   });
+
+  const handleAddRecipe = () => {
+    console.log(newRecipe);
+  };
+
   return (
     <Container maxW={"container.sm"}>
       <VStack spacing={8}>
@@ -53,6 +59,8 @@ const CreatePage = () => {
                 setNewRecipe({ ...newRecipe, instructions: e.target.value })
               }
             />
+
+            <Button onClick={handleAddRecipe}></Button>
           </VStack>
         </Box>
       </VStack>
