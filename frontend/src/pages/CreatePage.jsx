@@ -37,6 +37,22 @@ const CreatePage = () => {
                 setNewRecipe({ ...newRecipe, name: e.target.value })
               }
             />
+            <Input
+              placeholder="Ingredients"
+              name="ingredients"
+              value={newRecipe.ingredients}
+              onChange={(e) =>
+                setNewRecipe({ ...newRecipe, ingredients: e.target.value })
+              }
+            />
+            <Input
+              placeholder="Instructions"
+              name="instructions"
+              value={newRecipe.instructions}
+              onChange={(e) =>
+                setNewRecipe({ ...newRecipe, instructions: e.target.value })
+              }
+            />
           </VStack>
         </Box>
       </VStack>
