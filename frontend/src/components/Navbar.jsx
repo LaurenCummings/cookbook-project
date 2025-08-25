@@ -1,4 +1,5 @@
 import { Container } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -11,7 +12,18 @@ const Navbar = () => {
           base: "column",
           sm: "row",
         }}
-      ></Flex>
+      >
+        <Text
+          fontSize={{ base: "22", sm: "28" }}
+          fontWeight={"bold"}
+          textTransform={"uppercase"}
+          textAlign={"center"}
+          bgGradient={"linear(to-r, cyan.400, blue.500)"}
+          bgClip={"text"}
+        >
+          <Link to={"/"}>Product Store 🛒</Link>
+        </Text>
+      </Flex>
     </Container>
   );
 };
