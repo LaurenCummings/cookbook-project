@@ -1,5 +1,6 @@
 import { Container, Flex, Text, HStack, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { PlusSquareIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
   return (
@@ -26,7 +27,9 @@ const Navbar = () => {
 
         <HStack spacing={2} alignItems={"center"}>
           <Link to={"/create"}>
-            <Button></Button>
+            <Button>
+              <PlusSquareIcon fontSize={20} />
+            </Button>
           </Link>
         </HStack>
       </Flex>
