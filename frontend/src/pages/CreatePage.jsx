@@ -5,6 +5,7 @@ import {
   Heading,
   Box,
   useColorModeValue,
+  Input,
 } from "@chakra-ui/react";
 
 const CreatePage = () => {
@@ -26,7 +27,18 @@ const CreatePage = () => {
           p={6}
           rounded={"lg"}
           shadow={"md"}
-        ></Box>
+        >
+          <VStack spacing={4}>
+            <Input
+              placeholder="Recipe Name"
+              name="name"
+              value={newRecipe.name}
+              onChange={(e) =>
+                setNewRecipe({ ...newRecipe, name: e.target.value })
+              }
+            />
+          </VStack>
+        </Box>
       </VStack>
     </Container>
   );
