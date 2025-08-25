@@ -60,7 +60,9 @@ const CreatePage = () => {
               }
             />
 
-            <Button onClick={handleAddRecipe}></Button>
+            <Button colorScheme="blue" onClick={handleAddRecipe} w="full">
+              Add Product
+            </Button>
           </VStack>
         </Box>
       </VStack>
