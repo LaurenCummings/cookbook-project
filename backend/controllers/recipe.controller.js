@@ -60,6 +60,6 @@ export const deleteRecipe = async (req, res) => {
     res.status(200).json({ success: true, message: "Recipe deleted" });
   } catch (error) {
     console.error("error in deleting recipe:", error.message);
-    res.status(404).json({ success: false, message: "Recipe not found" });
+    res.status(500).json({ success: false, message: "Server Error" });
   }
 };
