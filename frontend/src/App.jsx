@@ -1,11 +1,5 @@
-import { Button } from "@chakra-ui/react";
-
 function App() {
-  return (
-    <div>
-      <Button>Hello</Button>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default App;
