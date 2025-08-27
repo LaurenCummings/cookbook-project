@@ -7,6 +7,6 @@ export const useRecipeStore = create((set) => ({
     if (!newRecipe.name || !newRecipe.ingredients || !newRecipe.instructions) {
       return { success: false, message: "Please fill in all required fields." };
     }
-    const res = await fetch("http://localhost:5000/api/recipes");
+    const res = await fetch("/api/recipes");
   },
 }));
