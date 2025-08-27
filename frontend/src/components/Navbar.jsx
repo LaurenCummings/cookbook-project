@@ -10,9 +10,11 @@ import { Link } from "react-router-dom";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
+import { useRecipeStore } from "../store/recipe";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { recipes } = useRecipeStore();
 
   return (
     <Container maxW={"1140px"} px={4}>
