@@ -8,6 +8,7 @@ import {
   Input,
   Button,
 } from "@chakra-ui/react";
+import { useRecipeStore } from "../store/recipe";
 
 const CreatePage = () => {
   const [newRecipe, setNewRecipe] = useState({
@@ -20,6 +21,8 @@ const CreatePage = () => {
 
   const handleAddRecipe = async () => {
     const { success, message } = await createRecipe(newRecipe);
+    console.log("Success:", success);
+    console.log("Message:", message);
   };
 
   return (
