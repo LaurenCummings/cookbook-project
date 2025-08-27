@@ -7,6 +7,7 @@ import {
   useColorModeValue,
   Input,
   Button,
+  useToast,
 } from "@chakra-ui/react";
 import { useRecipeStore } from "../store/recipe";
 
@@ -17,12 +18,26 @@ const CreatePage = () => {
     instructions: "",
   });
 
+  const toast = useToast();
   const { createRecipe } = useRecipeStore();
 
   const handleAddRecipe = async () => {
     const { success, message } = await createRecipe(newRecipe);
-    console.log("Success:", success);
-    console.log("Message:", message);
+    if (!success) {
+      toast({
+        title: "Error",
+        description: message,
+        status: "error",
+        isClosable: true,
+      });
+    } else {
+      toast({
+        title: "Success",
+        description: message,
+        status: "success",
+        isClosable: true,
+      });
+    }
   };
 
   return (
