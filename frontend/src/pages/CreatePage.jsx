@@ -16,8 +16,10 @@ const CreatePage = () => {
     instructions: "",
   });
 
-  const handleAddRecipe = () => {
-    console.log(newRecipe);
+  const { createRecipe } = useRecipeStore();
+
+  const handleAddRecipe = async () => {
+    const { success, message } = await createRecipe(newRecipe);
   };
 
   return (
