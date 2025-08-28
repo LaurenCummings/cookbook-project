@@ -21,13 +21,9 @@ const HomePage = () => {
           fontWeight="bold"
           color="gray.500"
         >
-          No Recipes Found
-          <Link to={"/create"}>
-            <Text
-              as="span"
-              color="blue.500"
-              _hover={{ textDecoration: "underline" }}
-            >
+          No Recipes Found{" "}
+          <Link to="/create">
+            <Text color="blue.500" _hover={{ textDecoration: "underline" }}>
               Create a Recipe
             </Text>
           </Link>
