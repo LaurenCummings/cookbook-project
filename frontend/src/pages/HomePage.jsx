@@ -2,6 +2,7 @@ import { Container, Text, VStack, SimpleGrid } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useRecipeStore } from "../store/recipe";
+import RecipeCard from "../components/RecipeCard";
 
 const HomePage = () => {
   const { fetchRecipes, recipes } = useRecipeStore();
