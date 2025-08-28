@@ -1,9 +1,10 @@
 import { Container, Text, VStack, SimpleGrid } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useRecipeStore } from "../store/recipe";
 
 const HomePage = () => {
-  const { fetchRecipes } = useProductStore();
+  const { fetchRecipes } = useRecipeStore();
 
   useEffect(() => {
     fetchRecipes();
