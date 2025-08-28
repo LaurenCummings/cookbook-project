@@ -1,4 +1,4 @@
-import { Container, Text, VStack } from "@chakra-ui/react";
+import { Container, Text, VStack, SimpleGrid } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -15,6 +15,16 @@ const HomePage = () => {
           Current Recipes
         </Text>
 
+        <SimpleGrid
+          columns={{
+            base: 1,
+            md: 2,
+            lg: 3,
+          }}
+          spacing={10}
+          w={"full"}
+        ></SimpleGrid>
+
         <Text
           fontSize="xl"
           textAlign={"center"}
@@ -22,7 +32,7 @@ const HomePage = () => {
           color="gray.500"
         >
           No Recipes Found{" "}
-          <Link to="/create">
+          <Link to={"/create"}>
             <Text color="blue.500" _hover={{ textDecoration: "underline" }}>
               Create a Recipe
             </Text>
