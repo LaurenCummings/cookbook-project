@@ -1,7 +1,15 @@
 import { Container, Text, VStack, SimpleGrid } from "@chakra-ui/react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
+  const { fetchRecipes } = useProductStore();
+
+  useEffect(() => {
+    fetchRecipes();
+  }, [fetchRecipes]);
+  console.log("recipes", recipes);
+
   return (
     <Container maxW="container.xl" py={12}>
       <VStack spacing={8}>
