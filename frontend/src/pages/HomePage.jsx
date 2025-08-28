@@ -1,4 +1,5 @@
 import { Container, Text, VStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,24 @@ const HomePage = () => {
           textAlign={"center"}
         >
           Current Recipes
+        </Text>
+
+        <Text
+          fontSize="xl"
+          textAlign={"center"}
+          fontWeight="bold"
+          color="gray.500"
+        >
+          No Recipes Found
+          <Link to={"/create"}>
+            <Text
+              as="span"
+              color="blue.500"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Create a Recipe
+            </Text>
+          </Link>
         </Text>
       </VStack>
     </Container>
