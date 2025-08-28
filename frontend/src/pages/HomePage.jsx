@@ -32,7 +32,11 @@ const HomePage = () => {
           }}
           spacing={10}
           w={"full"}
-        ></SimpleGrid>
+        >
+          {recipes.map((recipe) => (
+            <RecipeCard key={recipe._id} recipe={recipe} />
+          ))}
+        </SimpleGrid>
 
         <Text
           fontSize="xl"
