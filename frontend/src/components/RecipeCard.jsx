@@ -1,14 +1,12 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 
 const RecipeCard = ({ recipe }) => {
   return (
-    <Box
-      shadow="lg"
-      rounded="lg"
-      overflow="hidden"
-      transition="all 0.3s"
-      _hover={{ transform: "translateY(-5px)", shadow: "xl" }}
-    ></Box>
+    <Box p={4}>
+      <Heading as="h3" size="md" mb={2}>
+        {recipe.name}
+      </Heading>
+    </Box>
   );
 };
 
