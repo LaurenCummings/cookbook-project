@@ -1,7 +1,16 @@
-import { Box, Heading, Text, HStack, IconButton } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  HStack,
+  IconButton,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { EditIcon, DeleteIcon } from "react-icons";
 
 const RecipeCard = ({ recipe }) => {
+  const textColor = useColorModeValue("gray.600", "gray.200");
+  const bg = useColorModeValue("white", "gray.800");
   return (
     <Box p={4}>
       <Heading as="h3" size="md" mb={2}>
