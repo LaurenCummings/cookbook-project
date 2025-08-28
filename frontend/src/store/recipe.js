@@ -18,4 +18,9 @@ export const useRecipeStore = create((set) => ({
     set((state) => ({ recipes: [...state.recipes, data.data] }));
     return { success: true, message: "Recipe created successfully" };
   },
+  fetchRecipes: async () => {
+    const res = await fetch("/api/recipes");
+    const data = await res.json();
+    set({ recipes: data.data });
+  },
 }));
