@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useRecipeStore } from "../store/recipe";
 
 const HomePage = () => {
-  const { fetchRecipes } = useRecipeStore();
+  const { fetchRecipes, recipes } = useRecipeStore();
 
   useEffect(() => {
     fetchRecipes();
