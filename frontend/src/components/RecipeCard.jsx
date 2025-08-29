@@ -5,6 +5,7 @@ import {
   HStack,
   IconButton,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useRecipeStore } from "../store/recipe";
@@ -16,6 +17,8 @@ const RecipeCard = ({ recipe }) => {
   const { deleteRecipe } = useRecipeStore();
 
   const handleDeleteRecipe = async (rid) => {
+    const toast = useToast();
+
     const { success, message } = await deleteRecipe(rid);
   };
 
