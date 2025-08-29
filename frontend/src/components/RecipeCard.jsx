@@ -29,7 +29,11 @@ const RecipeCard = ({ recipe }) => {
       </Text>
       <HStack spacing={2}>
         <IconButton icon={<EditIcon />} colorScheme="blue" />
-        <IconButton icon={<DeleteIcon />} colorScheme="red" />
+        <IconButton
+          icon={<DeleteIcon />}
+          onClick={handleDeleteRecipe}
+          colorScheme="red"
+        />
       </HStack>
     </Box>
   );
