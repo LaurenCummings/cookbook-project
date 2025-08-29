@@ -17,6 +17,7 @@ const RecipeCard = ({ recipe }) => {
 
   const { deleteRecipe } = useRecipeStore();
   const toast = useToast();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleDeleteRecipe = async (rid) => {
     const { success, message } = await deleteRecipe(rid);
