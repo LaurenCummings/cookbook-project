@@ -50,7 +50,7 @@ const RecipeCard = ({ recipe }) => {
         <IconButton icon={<EditIcon />} colorScheme="blue" />
         <IconButton
           icon={<DeleteIcon />}
-          onClick={handleDeleteRecipe}
+          onClick={handleDeleteRecipe(recipe._id)}
           colorScheme="red"
         />
       </HStack>
