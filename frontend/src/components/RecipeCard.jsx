@@ -15,11 +15,18 @@ const RecipeCard = ({ recipe }) => {
   const bg = useColorModeValue("white", "gray.800");
 
   const { deleteRecipe } = useRecipeStore();
+  const toast = useToast();
 
   const handleDeleteRecipe = async (rid) => {
-    const toast = useToast();
-
     const { success, message } = await deleteRecipe(rid);
+    if (!success) {
+      toast({
+        title: "Error",
+        description: message,
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      })
   };
 
   return (
