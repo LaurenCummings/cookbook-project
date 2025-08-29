@@ -6,6 +6,7 @@ import {
   IconButton,
   useColorModeValue,
   useToast,
+  Modal,
 } from "@chakra-ui/react";
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useRecipeStore } from "../store/recipe";
