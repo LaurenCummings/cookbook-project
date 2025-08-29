@@ -39,19 +39,21 @@ const HomePage = () => {
           ))}
         </SimpleGrid>
 
-        <Text
-          fontSize="xl"
-          textAlign={"center"}
-          fontWeight="bold"
-          color="gray.500"
-        >
-          No Recipes Found{" "}
-          <Link to={"/create"}>
-            <Text color="blue.500" _hover={{ textDecoration: "underline" }}>
-              Create a Recipe
-            </Text>
-          </Link>
-        </Text>
+        {recipes.length == 0 && (
+          <Text
+            fontSize="xl"
+            textAlign={"center"}
+            fontWeight="bold"
+            color="gray.500"
+          >
+            No Recipes Found{" "}
+            <Link to={"/create"}>
+              <Text color="blue.500" _hover={{ textDecoration: "underline" }}>
+                Create a Recipe
+              </Text>
+            </Link>
+          </Text>
+        )}
       </VStack>
     </Container>
   );

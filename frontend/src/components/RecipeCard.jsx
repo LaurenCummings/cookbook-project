@@ -6,13 +6,13 @@ import {
   IconButton,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { EditIcon, DeleteIcon } from "react-icons";
+import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 
 const RecipeCard = ({ recipe }) => {
   const textColor = useColorModeValue("gray.600", "gray.200");
   const bg = useColorModeValue("white", "gray.800");
   return (
-    <Box p={4}>
+    <Box p={4} bg={bg}>
       <Heading as="h3" size="md" mb={2}>
         {recipe.name}
       </Heading>
