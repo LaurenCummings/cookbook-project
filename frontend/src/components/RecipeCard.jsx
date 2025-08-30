@@ -89,7 +89,7 @@ const RecipeCard = ({ recipe }) => {
               <Input
                 placeholder="Recipe Name"
                 name="name"
-                // value={updatedRecipe.name}
+                value={updatedRecipe.name}
                 // onChange={(e) =>
                 //   setUpdatedRecipe({ ...updatedRecipe, name: e.target.value })
                 // }
@@ -97,7 +97,7 @@ const RecipeCard = ({ recipe }) => {
               <Textarea
                 placeholder="Ingredients"
                 name="ingredients"
-                // value={updatedRecipe.ingredients}
+                value={updatedRecipe.ingredients}
                 // onChange={(e) =>
                 //   setUpdatedRecipe({
                 //     ...updatedRecipe,
@@ -108,7 +108,7 @@ const RecipeCard = ({ recipe }) => {
               <Textarea
                 placeholder="Instructions"
                 name="instructions"
-                // value={updatedRecipe.instructions}
+                value={updatedRecipe.instructions}
                 // onChange={(e) =>
                 //   setUpdatedrecipe({
                 //     ...updatedRecipe,
