@@ -6,6 +6,7 @@ import {
   Box,
   useColorModeValue,
   Input,
+  Textarea,
   Button,
   useToast,
 } from "@chakra-ui/react";
@@ -63,7 +64,7 @@ const CreatePage = () => {
                 setNewRecipe({ ...newRecipe, name: e.target.value })
               }
             />
-            <Input
+            <Textarea
               placeholder="Ingredients"
               name="ingredients"
               value={newRecipe.ingredients}
@@ -71,7 +72,7 @@ const CreatePage = () => {
                 setNewRecipe({ ...newRecipe, ingredients: e.target.value })
               }
             />
-            <Input
+            <Textarea
               placeholder="Instructions"
               name="instructions"
               value={newRecipe.instructions}
