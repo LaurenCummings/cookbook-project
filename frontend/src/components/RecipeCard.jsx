@@ -67,7 +67,7 @@ const RecipeCard = ({ recipe }) => {
     } else {
       toast({
         title: "Success",
-        description: message,
+        description: "Recipe updated successfully",
         status: "success",
         duration: 3000,
         isClosable: true,
