@@ -42,21 +42,30 @@ const RecipeCard = ({ recipe }) => {
   };
 
   return (
-    <Box p={4} bg={bg}>
-      <Heading as="h3" size="md" mb={2}>
-        {recipe.name}
-      </Heading>
-      <Text fontWeight="bold" fontSize="xl" color={textColor} mb={4}>
-        {recipe.ingredients}
-      </Text>
-      <HStack spacing={2}>
-        <IconButton icon={<EditIcon />} colorScheme="blue" />
-        <IconButton
-          icon={<DeleteIcon />}
-          onClick={() => handleDeleteRecipe(recipe._id)}
-          colorScheme="red"
-        />
-      </HStack>
+    <Box
+      shadow="lg"
+      rounded="lg"
+      overflow="hidden"
+      transition="all 0.3s"
+      _hover={{ transform: "translateY(-5px)", shadow: "xl" }}
+      bg={bg}
+    >
+      <Box p={4} bg={bg}>
+        <Heading as="h3" size="md" mb={2}>
+          {recipe.name}
+        </Heading>
+        <Text fontWeight="bold" fontSize="xl" color={textColor} mb={4}>
+          {recipe.ingredients}
+        </Text>
+        <HStack spacing={2}>
+          <IconButton icon={<EditIcon />} colorScheme="blue" />
+          <IconButton
+            icon={<DeleteIcon />}
+            onClick={() => handleDeleteRecipe(recipe._id)}
+            colorScheme="red"
+          />
+        </HStack>
+      </Box>
     </Box>
   );
 };
