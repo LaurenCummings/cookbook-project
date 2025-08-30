@@ -53,6 +53,9 @@ const RecipeCard = ({ recipe }) => {
     }
   };
 
+  const { updateRecipe } = useRecipeStore();
+  const handleUpdateRecipe = async (rid, updatedRecipe) => {};
+
   return (
     <Box
       shadow="lg"
@@ -120,7 +123,11 @@ const RecipeCard = ({ recipe }) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3}>
+            <Button
+              colorScheme="blue"
+              mr={3}
+              onClick={() => handleUpdateRecipe(recipe._id, updatedRecipe)}
+            >
               Update
             </Button>
             <Button variant="ghost" onClick={onClose}>
