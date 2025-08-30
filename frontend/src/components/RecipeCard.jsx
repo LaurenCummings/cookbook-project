@@ -56,6 +56,15 @@ const RecipeCard = ({ recipe }) => {
   const handleUpdateRecipe = async (rid, updatedRecipe) => {
     const { success, message } = await updateRecipe(rid, updatedRecipe);
     onClose();
+    if (!success) {
+      toast({
+        title: "Error",
+        description: message,
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
   };
 
   return (
