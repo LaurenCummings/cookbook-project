@@ -84,32 +84,32 @@ const RecipeCard = ({ recipe }) => {
               <Input
                 placeholder="Recipe Name"
                 name="name"
-                value={updatedRecipe.name}
-                onChange={(e) =>
-                  setUpdatedRecipe({ ...updatedRecipe, name: e.target.value })
-                }
+                // value={updatedRecipe.name}
+                // onChange={(e) =>
+                //   setUpdatedRecipe({ ...updatedRecipe, name: e.target.value })
+                // }
               />
               <Textarea
                 placeholder="Ingredients"
                 name="ingredients"
-                value={updatedRecipe.ingredients}
-                onChange={(e) =>
-                  setUpdatedRecipe({
-                    ...updatedRecipe,
-                    ingredients: e.target.value,
-                  })
-                }
+                // value={updatedRecipe.ingredients}
+                // onChange={(e) =>
+                //   setUpdatedRecipe({
+                //     ...updatedRecipe,
+                //     ingredients: e.target.value,
+                //   })
+                // }
               />
               <Textarea
                 placeholder="Instructions"
                 name="instructions"
-                value={updatedRecipe.instructions}
-                onChange={(e) =>
-                  setUpdatedrecipe({
-                    ...updatedRecipe,
-                    instructions: e.target.value,
-                  })
-                }
+                // value={updatedRecipe.instructions}
+                // onChange={(e) =>
+                //   setUpdatedrecipe({
+                //     ...updatedRecipe,
+                //     instructions: e.target.value,
+                //   })
+                // }
               />
             </VStack>
           </ModalBody>
