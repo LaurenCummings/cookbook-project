@@ -53,7 +53,10 @@ const RecipeCard = ({ recipe }) => {
     }
   };
 
-  const handleUpdateRecipe = async (rid, updatedRecipe) => {};
+  const handleUpdateRecipe = async (rid, updatedRecipe) => {
+    await updateRecipe(rid, updatedRecipe);
+    onClose();
+  };
 
   return (
     <Box
