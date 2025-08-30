@@ -116,6 +116,15 @@ const RecipeCard = ({ recipe }) => {
               />
             </VStack>
           </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={handleUpdate}>
+              Update
+            </Button>
+            <Button variant="ghost" onClick={onClose}>
+              Cancel
+            </Button>
+          </ModalFooter>
         </ModalContent>
       </Modal>
     </Box>
