@@ -21,8 +21,10 @@ import {
 } from "@chakra-ui/react";
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useRecipeStore } from "../store/recipe";
+import { useState } from "react";
 
 const RecipeCard = ({ recipe }) => {
+  const [updatedRecipe, setUpdatedRecipe] = useState(recipe);
   const textColor = useColorModeValue("gray.600", "gray.200");
   const bg = useColorModeValue("white", "gray.800");
 
@@ -118,7 +120,7 @@ const RecipeCard = ({ recipe }) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={handleUpdate}>
+            <Button colorScheme="blue" mr={3}>
               Update
             </Button>
             <Button variant="ghost" onClick={onClose}>
