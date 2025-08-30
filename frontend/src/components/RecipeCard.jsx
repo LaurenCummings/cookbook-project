@@ -65,7 +65,7 @@ const RecipeCard = ({ recipe }) => {
           {recipe.ingredients}
         </Text>
         <HStack spacing={2}>
-          <IconButton icon={<EditIcon />} colorScheme="blue" />
+          <IconButton icon={<EditIcon />} onClick={onOpen} colorScheme="blue" />
           <IconButton
             icon={<DeleteIcon />}
             onClick={() => handleDeleteRecipe(recipe._id)}
