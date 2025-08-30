@@ -28,7 +28,7 @@ const RecipeCard = ({ recipe }) => {
   const textColor = useColorModeValue("gray.600", "gray.200");
   const bg = useColorModeValue("white", "gray.800");
 
-  const { deleteRecipe } = useRecipeStore();
+  const { deleteRecipe, updateRecipe } = useRecipeStore();
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -53,7 +53,6 @@ const RecipeCard = ({ recipe }) => {
     }
   };
 
-  const { updateRecipe } = useRecipeStore();
   const handleUpdateRecipe = async (rid, updatedRecipe) => {};
 
   return (
