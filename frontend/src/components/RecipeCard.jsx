@@ -64,6 +64,14 @@ const RecipeCard = ({ recipe }) => {
         duration: 3000,
         isClosable: true,
       });
+    } else {
+      toast({
+        title: "Success",
+        description: message,
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
     }
   };
 
