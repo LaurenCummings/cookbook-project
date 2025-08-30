@@ -14,6 +14,7 @@ import {
   ModalCloseButton,
   ModalBody,
   useDisclosure,
+  Input,
 } from "@chakra-ui/react";
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useRecipeStore } from "../store/recipe";
@@ -79,7 +80,38 @@ const RecipeCard = ({ recipe }) => {
           <ModalHeader>Update Recipe</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <VStack spacing={4}></VStack>
+            <VStack spacing={4}>
+              <Input
+                placeholder="Recipe Name"
+                name="name"
+                value={updatedRecipe.name}
+                onChange={(e) =>
+                  setUpdatedRecipe({ ...updatedRecipe, name: e.target.value })
+                }
+              />
+              <Textarea
+                placeholder="Ingredients"
+                name="ingredients"
+                value={updatedRecipe.ingredients}
+                onChange={(e) =>
+                  setUpdatedRecipe({
+                    ...updatedRecipe,
+                    ingredients: e.target.value,
+                  })
+                }
+              />
+              <Textarea
+                placeholder="Instructions"
+                name="instructions"
+                value={updatedRecipe.instructions}
+                onChange={(e) =>
+                  setUpdatedrecipe({
+                    ...updatedRecipe,
+                    instructions: e.target.value,
+                  })
+                }
+              />
+            </VStack>
           </ModalBody>
         </ModalContent>
       </Modal>
