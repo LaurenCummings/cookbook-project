@@ -50,5 +50,6 @@ export const useRecipeStore = create((set) => ({
         recipe._id === rid ? data.data : recipe
       ),
     }));
+    return { success: true, message: data.message };
   },
 }));
