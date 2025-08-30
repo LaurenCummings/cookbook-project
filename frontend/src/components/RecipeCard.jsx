@@ -3,10 +3,16 @@ import {
   Heading,
   Text,
   HStack,
+  VStack,
   IconButton,
   useColorModeValue,
   useToast,
   Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
   useDisclosure,
 } from "@chakra-ui/react";
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
@@ -66,6 +72,17 @@ const RecipeCard = ({ recipe }) => {
           />
         </HStack>
       </Box>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Update Recipe</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <VStack spacing={4}></VStack>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Box>
   );
 };
