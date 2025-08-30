@@ -35,4 +35,20 @@ export const useRecipeStore = create((set) => ({
     }));
     return { success: true, message: data.message };
   },
+  updateRecipe: async (rid, updatedRecipe) => {
+    const res = await fetch(`/api/recipes/${rid}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedRecipe),
+    });
+    const data = await res.json();
+    if (!data.success) return { success: false, message: data.message };
+    set((state) => ({
+      recipes: state.recipes.map((recipe) =>
+        recipe._id === rid ? data.data : recipe
+      ),
+    }));
+  },
 }));
