@@ -10,6 +10,7 @@ const RecipePage = () => {
         <Heading as={"h1"} size={"xl"} textAlign={"center"} mb={8}>
           {recipe.name}
         </Heading>
+        <Container>{recipe.ingredients}</Container>
       </VStack>
     </Container>
   );
