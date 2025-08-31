@@ -1,4 +1,4 @@
-const RecipePage = () => {
+const RecipePage = ({ recipe }) => {
   return <div>RecipePage</div>;
 };
 
