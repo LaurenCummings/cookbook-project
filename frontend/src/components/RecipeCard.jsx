@@ -77,7 +77,7 @@ const RecipeCard = ({ recipe }) => {
   };
 
   return (
-    <Link to="/RecipePage/:id" recipe={recipe}>
+    <Link to="/recipePage/:id" recipe={recipe}>
       <Box
         shadow="lg"
         rounded="lg"
