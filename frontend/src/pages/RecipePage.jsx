@@ -10,7 +10,11 @@ const RecipePage = () => {
         <Heading as={"h1"} size={"xl"} textAlign={"center"} mb={8}>
           {recipe.name}
         </Heading>
-        <Container>{recipe.ingredients}</Container>
+        <Container>
+          {recipe.ingredients.split("\n").map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
+        </Container>
       </VStack>
     </Container>
   );
