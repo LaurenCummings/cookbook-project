@@ -22,6 +22,7 @@ import {
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useRecipeStore } from "../store/recipe";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const RecipeCard = ({ recipe }) => {
   const [updatedRecipe, setUpdatedRecipe] = useState(recipe);
