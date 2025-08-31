@@ -8,7 +8,7 @@ const RecipePage = () => {
     <Container maxW={"container.sm"}>
       <VStack spacing={8}>
         <Heading as={"h1"} size={"xl"} textAlign={"center"} mb={8}>
-          Recipe Name
+          {recipe.name}
         </Heading>
       </VStack>
     </Container>
