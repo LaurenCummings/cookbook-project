@@ -1,4 +1,4 @@
-import { Container, VStack, Heading } from "@chakra-ui/react";
+import { Container, VStack, Heading, Text } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
 
 const RecipePage = () => {
@@ -15,7 +15,9 @@ const RecipePage = () => {
             Ingredients
           </Heading>
           {recipe.ingredients.split("\n").map((item, index) => (
-            <p key={index}>{item}</p>
+            <Text key={index} fontSize="sm">
+              {item}
+            </Text>
           ))}
         </Container>
       </VStack>
