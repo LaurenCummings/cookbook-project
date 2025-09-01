@@ -86,13 +86,13 @@ const RecipePage = () => {
       </HStack>
       <VStack spacing={8}>
         <Heading as={"h1"} size={"lg"} textAlign={"center"}>
-          {recipe.name}
+          {updatedRecipe.name}
         </Heading>
         <Container>
           <Heading as={"h3"} size={"md"} textAlign={"center"}>
             Ingredients
           </Heading>
-          {recipe.ingredients.split("\n").map((item, index) => (
+          {updatedRecipe.ingredients.split("\n").map((item, index) => (
             <Text key={index} fontSize="sm" textAlign={"center"}>
               {item}
             </Text>
@@ -100,7 +100,7 @@ const RecipePage = () => {
           <Heading as={"h3"} size={"md"}>
             Instructions
           </Heading>
-          {recipe.instructions.split("\n").map((item, index) => (
+          {updatedRecipe.instructions.split("\n").map((item, index) => (
             <Text key={index} fontSize="md">
               {item}
             </Text>
