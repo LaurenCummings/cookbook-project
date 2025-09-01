@@ -77,8 +77,12 @@ const RecipePage = () => {
   return (
     <Box maxW={"lg"} m={"auto"}>
       <HStack spacing={2} justifyContent={"flex-end"}>
-        <IconButton icon={<EditIcon />} colorScheme={"blue"} />
-        <IconButton icon={<DeleteIcon />} colorScheme={"red"} />
+        <IconButton icon={<EditIcon />} onClick={onOpen} colorScheme={"blue"} />
+        <IconButton
+          icon={<DeleteIcon />}
+          onClick={() => handleDeleteRecipe(recipe._id)}
+          colorScheme={"red"}
+        />
       </HStack>
       <VStack spacing={8}>
         <Heading as={"h1"} size={"lg"} textAlign={"center"}>
