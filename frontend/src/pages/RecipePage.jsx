@@ -20,10 +20,57 @@ import {
 } from "@chakra-ui/react";
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useLocation } from "react-router-dom";
+import { useRecipeStore } from "../store/recipe";
 
 const RecipePage = () => {
   const recipe = useLocation().state;
-  console.log(recipe);
+  const { deleteRecipe, updateRecipe } = useRecipeStore();
+  const toast = useToast();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const handleDeleteRecipe = async (rid) => {
+    const { success, message } = await deleteRecipe(rid);
+    if (!success) {
+      toast({
+        title: "Error",
+        description: message,
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    } else {
+      toast({
+        title: "Success",
+        description: message,
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
+
+  const handleUpdateRecipe = async (rid, updatedRecipe) => {
+    const { success, message } = await updateRecipe(rid, updatedRecipe);
+    onClose();
+    if (!success) {
+      toast({
+        title: "Error",
+        description: message,
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    } else {
+      toast({
+        title: "Success",
+        description: "Recipe updated successfully",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
+
   return (
     <Box maxW={"lg"} m={"auto"}>
       <HStack spacing={2} justifyContent={"flex-end"}>
