@@ -21,9 +21,11 @@ import {
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useLocation } from "react-router-dom";
 import { useRecipeStore } from "../store/recipe";
+import { useState } from "react";
 
 const RecipePage = () => {
   const recipe = useLocation().state;
+  const [updatedRecipe, setUpdatedRecipe] = useState(recipe);
   const { deleteRecipe, updateRecipe } = useRecipeStore();
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
