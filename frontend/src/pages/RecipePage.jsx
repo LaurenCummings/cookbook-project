@@ -19,6 +19,11 @@ const RecipePage = () => {
               {item}
             </Text>
           ))}
+          {recipe.instructions.split("\n").map((item, index) => (
+            <Text key={index} fontSize="md">
+              {item}
+            </Text>
+          ))}
         </Container>
       </VStack>
     </Container>
