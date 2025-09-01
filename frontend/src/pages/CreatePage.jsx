@@ -20,7 +20,7 @@ const CreatePage = () => {
     instructions: "",
   });
 
-  navigate = useNavigate();
+  const navigate = useNavigate();
 
   const toast = useToast();
   const { createRecipe } = useRecipeStore();
@@ -35,6 +35,7 @@ const CreatePage = () => {
         isClosable: true,
       });
     } else {
+      navigate("/");
       toast({
         title: "Success",
         description: message,
