@@ -15,7 +15,7 @@ const RecipePage = () => {
   console.log(recipe);
   return (
     <Box maxW={"lg"} m={"auto"}>
-      <HStack spacing={2}>
+      <HStack spacing={2} justifyContent={"flex-end"}>
         <IconButton icon={<EditIcon />} />
         <IconButton icon={<DeleteIcon />} />
       </HStack>
