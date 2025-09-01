@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Container,
   VStack,
@@ -18,6 +19,8 @@ const CreatePage = () => {
     ingredients: "",
     instructions: "",
   });
+
+  navigate = useNavigate();
 
   const toast = useToast();
   const { createRecipe } = useRecipeStore();
