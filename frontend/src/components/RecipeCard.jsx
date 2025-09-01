@@ -26,9 +26,6 @@ const RecipeCard = ({ recipe }) => {
           <Heading as="h3" size="md" mb={2}>
             {recipe.name}
           </Heading>
-          <Text fontWeight="bold" fontSize="xl" color={textColor} mb={4}>
-            {recipe.ingredients}
-          </Text>
         </Box>
       </Box>
     </Link>
