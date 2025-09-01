@@ -1,4 +1,5 @@
 import { Box, Container, VStack, Heading, Text } from "@chakra-ui/react";
+import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useLocation } from "react-router-dom";
 
 const RecipePage = () => {
