@@ -97,6 +97,9 @@ const RecipePage = () => {
               {item}
             </Text>
           ))}
+          <Heading as={"h3"} size={"md"}>
+            Instructions
+          </Heading>
           {recipe.instructions.split("\n").map((item, index) => (
             <Text key={index} fontSize="md">
               {item}
