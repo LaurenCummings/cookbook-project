@@ -18,6 +18,7 @@ const CreatePage = () => {
     name: "",
     ingredients: "",
     instructions: "",
+    image: "",
   });
 
   const navigate = useNavigate();
