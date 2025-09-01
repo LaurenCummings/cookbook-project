@@ -15,6 +15,10 @@ const RecipePage = () => {
   console.log(recipe);
   return (
     <Box maxW={"lg"} m={"auto"}>
+      <HStack spacing={2}>
+        <IconButton icon={<EditIcon />} />
+        <IconButton icon={<DeleteIcon />} />
+      </HStack>
       <VStack spacing={8}>
         <Heading as={"h1"} size={"lg"} textAlign={"center"}>
           {recipe.name}
