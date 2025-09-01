@@ -5,7 +5,7 @@ const RecipePage = () => {
   const recipe = useLocation().state;
   console.log(recipe);
   return (
-    <Box maxW={"lg"}>
+    <Box maxW={"lg"} m={"auto"}>
       <VStack spacing={8}>
         <Heading as={"h1"} size={"lg"} textAlign={"center"}>
           {recipe.name}
