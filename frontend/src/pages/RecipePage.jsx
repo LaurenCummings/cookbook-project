@@ -1,11 +1,11 @@
-import { Container, VStack, Heading, Text } from "@chakra-ui/react";
+import { Box, Container, VStack, Heading, Text } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
 
 const RecipePage = () => {
   const recipe = useLocation().state;
   console.log(recipe);
   return (
-    <Container maxW={"container.sm"}>
+    <Box maxW={"lg"}>
       <VStack spacing={8}>
         <Heading as={"h1"} size={"lg"} textAlign={"center"}>
           {recipe.name}
@@ -26,7 +26,7 @@ const RecipePage = () => {
           ))}
         </Container>
       </VStack>
-    </Container>
+    </Box>
   );
 };
 
