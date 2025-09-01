@@ -84,6 +84,14 @@ const CreatePage = () => {
                 setNewRecipe({ ...newRecipe, instructions: e.target.value })
               }
             />
+            <Input
+              placeholder="Image URL"
+              name="image"
+              value={newRecipe.image}
+              onChange={(e) =>
+                setNewRecipe({ ...newRecipe, image: e.target.value })
+              }
+            />
 
             <Button colorScheme="blue" onClick={handleAddRecipe} w="full">
               Add Recipe
