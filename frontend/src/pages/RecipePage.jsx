@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   HStack,
   VStack,
@@ -99,6 +100,61 @@ const RecipePage = () => {
           ))}
         </Container>
       </VStack>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Update Recipe</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <VStack spacing={4}>
+              <Input
+                placeholder="Recipe Name"
+                name="name"
+                value={updatedRecipe.name}
+                onChange={(e) =>
+                  setUpdatedRecipe({ ...updatedRecipe, name: e.target.value })
+                }
+              />
+              <Textarea
+                placeholder="Ingredients"
+                name="ingredients"
+                value={updatedRecipe.ingredients}
+                onChange={(e) =>
+                  setUpdatedRecipe({
+                    ...updatedRecipe,
+                    ingredients: e.target.value,
+                  })
+                }
+              />
+              <Textarea
+                placeholder="Instructions"
+                name="instructions"
+                value={updatedRecipe.instructions}
+                onChange={(e) =>
+                  setUpdatedRecipe({
+                    ...updatedRecipe,
+                    instructions: e.target.value,
+                  })
+                }
+              />
+            </VStack>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button
+              colorScheme="blue"
+              mr={3}
+              onClick={() => handleUpdateRecipe(recipe._id, updatedRecipe)}
+            >
+              Update
+            </Button>
+            <Button variant="ghost" onClick={onClose}>
+              Cancel
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Box>
   );
 };

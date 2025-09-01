@@ -138,7 +138,7 @@ const RecipeCard = ({ recipe }) => {
                   name="instructions"
                   value={updatedRecipe.instructions}
                   onChange={(e) =>
-                    setUpdatedrecipe({
+                    setUpdatedRecipe({
                       ...updatedRecipe,
                       instructions: e.target.value,
                     })
