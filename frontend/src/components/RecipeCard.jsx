@@ -6,6 +6,7 @@ import {
   HStack,
   VStack,
   IconButton,
+  Image,
   useColorModeValue,
   useToast,
   Modal,
@@ -86,6 +87,13 @@ const RecipeCard = ({ recipe }) => {
         _hover={{ transform: "translateY(-5px)", shadow: "xl" }}
         bg={bg}
       >
+        <Image
+          src={recipe.image}
+          alt={recipe.name}
+          h={48}
+          w="full"
+          objectFit="cover"
+        />
         <Box p={4} bg={bg}>
           <Heading as="h3" size="md" mb={2}>
             {recipe.name}
