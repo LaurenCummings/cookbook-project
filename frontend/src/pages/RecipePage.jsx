@@ -20,7 +20,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useRecipeStore } from "../store/recipe";
 import { useState } from "react";
 
@@ -28,6 +28,7 @@ const RecipePage = () => {
   const recipe = useLocation().state;
   const [updatedRecipe, setUpdatedRecipe] = useState(recipe);
   const { deleteRecipe, updateRecipe } = useRecipeStore();
+  const navigate = useNavigate();
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -42,6 +43,7 @@ const RecipePage = () => {
         isClosable: true,
       });
     } else {
+      navigate("/");
       toast({
         title: "Success",
         description: message,
