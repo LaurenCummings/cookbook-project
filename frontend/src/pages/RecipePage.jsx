@@ -147,6 +147,14 @@ const RecipePage = () => {
                   })
                 }
               />
+              <Input
+                placeholder="Image URL"
+                name="image"
+                value={updatedRecipe.image}
+                onChange={(e) =>
+                  setUpdatedRecipe({ ...updatedRecipe, image: e.target.value })
+                }
+              />
             </VStack>
           </ModalBody>
 
