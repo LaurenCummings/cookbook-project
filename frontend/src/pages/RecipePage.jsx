@@ -104,7 +104,7 @@ const RecipePage = () => {
           borderRadius={10}
         />
         <Container>
-          <Heading as={"h3"} size={"md"} textAlign={"center"}>
+          <Heading as={"h3"} size={"md"} textAlign={"center"} mb={3}>
             Ingredients
           </Heading>
           {updatedRecipe.ingredients.split("\n").map((item, index) => (
@@ -112,7 +112,7 @@ const RecipePage = () => {
               {item}
             </Text>
           ))}
-          <Heading as={"h3"} size={"md"}>
+          <Heading as={"h3"} size={"md"} mt={5} mb={3}>
             Instructions
           </Heading>
           {updatedRecipe.instructions.split("\n").map((item, index) => (
