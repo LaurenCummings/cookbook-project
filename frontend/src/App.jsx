@@ -4,6 +4,7 @@ import RecipePage from "./pages/RecipePage";
 import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/create" element={<CreatePage />} />
         <Route path="/recipePage/:id" element={<RecipePage />} />
       </Routes>
+      <Footer />
     </Box>
   );
 }
