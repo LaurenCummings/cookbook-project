@@ -97,6 +97,7 @@ const RecipePage = () => {
           h={80}
           w="full"
           objectFit="cover"
+          borderRadius={10}
         />
         <Container>
           <Heading as={"h3"} size={"md"} textAlign={"center"}>
