@@ -8,6 +8,7 @@ import {
   Text,
   IconButton,
   useToast,
+  Image,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -90,6 +91,7 @@ const RecipePage = () => {
         <Heading as={"h1"} size={"lg"} textAlign={"center"}>
           {updatedRecipe.name}
         </Heading>
+        <Image src={updatedRecipe.image} alt={updatedRecipe.name} />
         <Container>
           <Heading as={"h3"} size={"md"} textAlign={"center"}>
             Ingredients
