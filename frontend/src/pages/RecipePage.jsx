@@ -91,7 +91,13 @@ const RecipePage = () => {
         <Heading as={"h1"} size={"lg"} textAlign={"center"}>
           {updatedRecipe.name}
         </Heading>
-        <Image src={updatedRecipe.image} alt={updatedRecipe.name} />
+        <Image
+          src={updatedRecipe.image}
+          alt={updatedRecipe.name}
+          h={80}
+          w="full"
+          objectFit="cover"
+        />
         <Container>
           <Heading as={"h3"} size={"md"} textAlign={"center"}>
             Ingredients
