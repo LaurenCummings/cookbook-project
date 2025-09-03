@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Image, useColorModeValue } from "@chakra-ui/react";
+import { Box, Heading, Image, useColorModeValue } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const RecipeCard = ({ recipe }) => {
