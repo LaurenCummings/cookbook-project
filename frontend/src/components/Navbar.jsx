@@ -1,6 +1,7 @@
 import {
   Container,
   Flex,
+  Input,
   Text,
   HStack,
   Button,
@@ -35,6 +36,8 @@ const Navbar = () => {
         </Text>
 
         <HStack spacing={2} alignItems={"center"}>
+          <Input placeholder="Password" />
+          <Button>Log In</Button>
           <Link to={"/create"}>
             <Button>
               <PlusSquareIcon fontSize={20} />
