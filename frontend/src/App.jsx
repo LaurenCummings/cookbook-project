@@ -5,15 +5,30 @@ import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { useState } from "react";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
   return (
     <Box minH={"100vh"} bg={useColorModeValue("gray.100", "gray.900")}>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />
-        <Route path="/recipePage/:id" element={<RecipePage />} />
+        <Route
+          path="/recipePage/:id"
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <RecipePage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
       <Footer />
     </Box>
