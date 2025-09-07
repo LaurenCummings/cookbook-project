@@ -5,6 +5,7 @@ const ProtectedRoute = ({ children, isAuthenticated }) => {
   const toast = useToast();
 
   if (!isAuthenticated) {
+    toast.closeAll();
     toast({
       title: "Error",
       description: "You must be logged in to view recipes",
