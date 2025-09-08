@@ -1,13 +1,5 @@
 import {
   Button,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
-  ModalBody,
-  ModalFooter,
-  useDisclosure,
   AlertDialog,
   AlertDialogBody,
   AlertDialogFooter,
