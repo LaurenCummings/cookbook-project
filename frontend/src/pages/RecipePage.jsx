@@ -25,7 +25,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useRecipeStore } from "../store/recipe";
 import { useState } from "react";
 
-const RecipePage = () => {
+const RecipePage = ({ isAuthenticated }) => {
   const recipe = useLocation().state;
   const [updatedRecipe, setUpdatedRecipe] = useState(recipe);
   const { deleteRecipe, updateRecipe } = useRecipeStore();
