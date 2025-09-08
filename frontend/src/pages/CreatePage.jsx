@@ -23,6 +23,7 @@ const CreatePage = () => {
     servings: "",
     notes: "",
     image: "",
+    sourceName: "",
     source: "",
   });
 
@@ -128,6 +129,14 @@ const CreatePage = () => {
               value={newRecipe.image}
               onChange={(e) =>
                 setNewRecipe({ ...newRecipe, image: e.target.value })
+              }
+            />
+            <Input
+              placeholder="Source Name"
+              name="sourceName"
+              value={newRecipe.sourceName}
+              onChange={(e) =>
+                setNewRecipe({ ...newRecipe, sourceName: e.target.value })
               }
             />
             <Input
