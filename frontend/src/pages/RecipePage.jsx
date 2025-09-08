@@ -33,14 +33,15 @@ const RecipePage = ({ isAuthenticated }) => {
   const navigate = useNavigate();
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const deletionModalDisclosure = useDisclosure();
 
   const handleDeleteClick = () => {
-    onOpen();
+    deletionModalDisclosure.onOpen();
   };
 
   const handleDeleteRecipe = async (rid) => {
     const { success, message } = await deleteRecipe(rid);
-    onClose();
+    deletionModalDisclosure.onClose();
     if (!success) {
       toast({
         title: "Error",
@@ -98,8 +99,8 @@ const RecipePage = ({ isAuthenticated }) => {
             colorScheme={"red"}
           />
           <DeletionModal
-            isOpen={isOpen}
-            onClose={onClose}
+            isOpen={deletionModalDisclosure.isOpen}
+            onClose={deletionModalDisclosure.onClose}
             onConfirm={() => handleDeleteRecipe(recipe._id)}
           />
         </HStack>
