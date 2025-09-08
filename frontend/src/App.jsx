@@ -9,7 +9,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { useState } from "react";
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
 
   const handleLogin = () => {
     setIsAuthenticated(true);
