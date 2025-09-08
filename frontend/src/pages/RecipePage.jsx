@@ -164,6 +164,47 @@ const RecipePage = ({ isAuthenticated }) => {
                 }
               />
               <Input
+                placeholder="Dish Type"
+                name="dishType"
+                value={updatedRecipe.dishType}
+                onChange={(e) =>
+                  setUpdatedRecipe({
+                    ...updatedRecipe,
+                    dishType: e.target.value,
+                  })
+                }
+              />
+              <Input
+                placeholder="Time"
+                name="time"
+                value={updatedRecipe.time}
+                onChange={(e) =>
+                  setUpdatedRecipe({ ...updatedRecipe, time: e.target.value })
+                }
+              />
+              <Input
+                placeholder="Servings"
+                name="servings"
+                value={updatedRecipe.servings}
+                onChange={(e) =>
+                  setUpdatedRecipe({
+                    ...updatedRecipe,
+                    servings: e.target.value,
+                  })
+                }
+              />
+              <Textarea
+                placeholder="Notes"
+                name="notes"
+                value={updatedRecipe.notes}
+                onChange={(e) =>
+                  setUpdatedRecipe({
+                    ...updatedRecipe,
+                    notes: e.target.value,
+                  })
+                }
+              />
+              <Input
                 placeholder="Image URL"
                 name="image"
                 value={updatedRecipe.image}
