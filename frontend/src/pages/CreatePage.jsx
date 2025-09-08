@@ -90,6 +90,38 @@ const CreatePage = () => {
               }
             />
             <Input
+              placeholder="Dish Type"
+              name="dishType"
+              value={newRecipe.dishType}
+              onChange={(e) =>
+                setNewRecipe({ ...newRecipe, dishType: e.target.value })
+              }
+            />
+            <Input
+              placeholder="Time"
+              name="time"
+              value={newRecipe.time}
+              onChange={(e) =>
+                setNewRecipe({ ...newRecipe, time: e.target.value })
+              }
+            />
+            <Input
+              placeholder="Servings"
+              name="servings"
+              value={newRecipe.servings}
+              onChange={(e) =>
+                setNewRecipe({ ...newRecipe, servings: e.target.value })
+              }
+            />
+            <Textarea
+              placeholder="Notes"
+              name="notes"
+              value={newRecipe.notes}
+              onChange={(e) =>
+                setNewRecipe({ ...newRecipe, notes: e.target.value })
+              }
+            />
+            <Input
               placeholder="Image URL"
               name="image"
               value={newRecipe.image}
