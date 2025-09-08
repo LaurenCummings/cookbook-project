@@ -8,7 +8,7 @@ const ProtectedRoute = ({ children, isAuthenticated }) => {
     toast.closeAll();
     toast({
       title: "Error",
-      description: "You must be logged in to view recipes",
+      description: "You must be logged in to create recipes",
       status: "error",
       duration: 3000,
       isClosable: true,
