@@ -224,6 +224,14 @@ const RecipePage = ({ isAuthenticated }) => {
                   setUpdatedRecipe({ ...updatedRecipe, image: e.target.value })
                 }
               />
+              <Input
+                placeholder="Source"
+                name="source"
+                value={updatedRecipe.source}
+                onChange={(e) =>
+                  setUpdatedRecipe({ ...updatedRecipe, source: e.target.value })
+                }
+              />
             </VStack>
           </ModalBody>
 
