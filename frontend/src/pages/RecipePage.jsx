@@ -141,6 +141,18 @@ const RecipePage = ({ isAuthenticated }) => {
             </Text>
           ))}
         </Container>
+        {updatedRecipe.notes && (
+          <Container>
+            <Heading as={"h3"} size={"md"} mt={5} mb={3}>
+              Notes
+            </Heading>
+            {updatedRecipe.notes.split("\n").map((item, index) => (
+              <Text key={index} fontSize="md">
+                {item}
+              </Text>
+            ))}
+          </Container>
+        )}
       </VStack>
 
       <Modal isOpen={isOpen} onClose={onClose}>
