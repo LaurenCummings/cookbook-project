@@ -251,6 +251,17 @@ const RecipePage = ({ isAuthenticated }) => {
                 }
               />
               <Input
+                placeholder="Source Name"
+                name="sourceName"
+                value={updatedRecipe.sourceName}
+                onChange={(e) =>
+                  setUpdatedRecipe({
+                    ...updatedRecipe,
+                    sourceName: e.target.value,
+                  })
+                }
+              />
+              <Input
                 placeholder="Source"
                 name="source"
                 value={updatedRecipe.source}
