@@ -79,18 +79,21 @@ const RecipePage = ({ isAuthenticated }) => {
 
   return (
     <Box maxW={"lg"} m={"auto"}>
-      <HStack spacing={2} justifyContent={"flex-end"}>
-        <IconButton
-          icon={<EditIcon />}
-          onClick={onOpen}
-          colorScheme={"green"}
-        />
-        <IconButton
-          icon={<DeleteIcon />}
-          onClick={() => handleDeleteRecipe(recipe._id)}
-          colorScheme={"red"}
-        />
-      </HStack>
+      {isAuthenticated && (
+        <HStack spacing={2} justifyContent={"flex-end"}>
+          <IconButton
+            icon={<EditIcon />}
+            onClick={onOpen}
+            colorScheme={"green"}
+          />
+          <IconButton
+            icon={<DeleteIcon />}
+            onClick={() => handleDeleteRecipe(recipe._id)}
+            colorScheme={"red"}
+          />
+        </HStack>
+      )}
+
       <VStack spacing={8}>
         <Heading as={"h1"} size={"lg"} textAlign={"center"}>
           {updatedRecipe.name}
