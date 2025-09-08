@@ -18,6 +18,10 @@ const CreatePage = () => {
     name: "",
     ingredients: "",
     instructions: "",
+    dishType: "",
+    time: "",
+    servings: "",
+    notes: "",
     image: "",
   });
 
