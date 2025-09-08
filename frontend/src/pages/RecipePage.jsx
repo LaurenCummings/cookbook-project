@@ -154,11 +154,11 @@ const RecipePage = ({ isAuthenticated }) => {
             ))}
           </Container>
         )}
-        {updatedRecipe.source && (
+        {updatedRecipe.source && updatedRecipe.sourceName && (
           <Text>
             Source:{" "}
             <Link href={updatedRecipe.source} isExternal>
-              {updatedRecipe.source}
+              {updatedRecipe.sourceName}
             </Link>
           </Text>
         )}
