@@ -1,33 +1,44 @@
 import {
   Button,
+  Modal,
   ModalOverlay,
   ModalContent,
   ModalHeader,
   ModalCloseButton,
   ModalBody,
   ModalFooter,
+  useDisclosure,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
 } from "@chakra-ui/react";
+import React from "react";
 
-const ConfirmationModal = ({ show, onClose, onConfirm, message }) => {
-  if (!show) {
-    return null;
-  }
+const ConfirmationModal = ({ isOpen, onClose, onConfirm }) => {
+  const cancelRef = React.useRef();
   return (
-    <ModalOverlay>
-      <ModalContent>
-        <ModalHeader>Delete Recipe</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody>{message}</ModalBody>
-        <ModalFooter>
-          <Button colorScheme="red" mr={3} onClick={onConfirm}>
-            Confirm
-          </Button>
-          <Button variant="ghost" onClick={onClose}>
-            Cancel
-          </Button>
-        </ModalFooter>
-      </ModalContent>
-    </ModalOverlay>
+    <AlertDialog
+      isOpen={isOpen}
+      leastDestructiveRef={cancelRef}
+      onClose={onClose}
+    >
+      <AlertDialogOverlay>
+        <AlertDialogContent>
+          <AlertDialogHeader>Delete Recipe?</AlertDialogHeader>
+          <AlertDialogBody>
+            Are you sure you want to delete this recipe?
+          </AlertDialogBody>
+          <AlertDialogFooter>
+            <Button colorScheme="red" onClick={onConfirm} ml={3}>
+              Delete
+            </Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialogOverlay>
+    </AlertDialog>
   );
 };
 

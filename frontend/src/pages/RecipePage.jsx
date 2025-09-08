@@ -24,6 +24,7 @@ import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useRecipeStore } from "../store/recipe";
 import { useState } from "react";
+import DeletionModal from "../components/ConfirmationModal";
 
 const RecipePage = ({ isAuthenticated }) => {
   const recipe = useLocation().state;
@@ -33,8 +34,13 @@ const RecipePage = ({ isAuthenticated }) => {
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const handleDeleteClick = () => {
+    onOpen();
+  };
+
   const handleDeleteRecipe = async (rid) => {
     const { success, message } = await deleteRecipe(rid);
+    onClose();
     if (!success) {
       toast({
         title: "Error",
@@ -88,8 +94,13 @@ const RecipePage = ({ isAuthenticated }) => {
           />
           <IconButton
             icon={<DeleteIcon />}
-            onClick={() => handleDeleteRecipe(recipe._id)}
+            onClick={handleDeleteClick}
             colorScheme={"red"}
+          />
+          <DeletionModal
+            isOpen={isOpen}
+            onClose={onClose}
+            onConfirm={() => handleDeleteRecipe(recipe._id)}
           />
         </HStack>
       )}
