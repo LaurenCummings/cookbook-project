@@ -20,15 +20,15 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/create" element={<CreatePage />} />
         <Route
-          path="/recipePage/:id"
+          path="/create"
           element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
-              <RecipePage />
+              <CreatePage />
             </ProtectedRoute>
           }
         />
+        <Route path="/recipePage/:id" element={<RecipePage />} />
       </Routes>
       <Footer />
     </Box>
