@@ -106,10 +106,14 @@ const RecipePage = ({ isAuthenticated }) => {
         </HStack>
       )}
 
-      <VStack spacing={8}>
+      <VStack spacing={3}>
         <Heading as={"h1"} size={"lg"} textAlign={"center"}>
           {updatedRecipe.name}
         </Heading>
+        {updatedRecipe.servings && (
+          <Text>Servings: {updatedRecipe.servings}</Text>
+        )}
+        {updatedRecipe.time && <Text>Time: {updatedRecipe.time}</Text>}
         <Image
           src={updatedRecipe.image}
           alt={updatedRecipe.name}
@@ -117,6 +121,7 @@ const RecipePage = ({ isAuthenticated }) => {
           w="full"
           objectFit="cover"
           borderRadius={10}
+          m={5}
         />
         <Container>
           <Heading as={"h3"} size={"md"} textAlign={"center"} mb={3}>
