@@ -23,6 +23,7 @@ const CreatePage = () => {
     servings: "",
     notes: "",
     image: "",
+    source: "",
   });
 
   const navigate = useNavigate();
@@ -127,6 +128,14 @@ const CreatePage = () => {
               value={newRecipe.image}
               onChange={(e) =>
                 setNewRecipe({ ...newRecipe, image: e.target.value })
+              }
+            />
+            <Input
+              placeholder="Source"
+              name="source"
+              value={newRecipe.source}
+              onChange={(e) =>
+                setNewRecipe({ ...newRecipe, source: e.target.value })
               }
             />
 
