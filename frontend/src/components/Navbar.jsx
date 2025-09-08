@@ -38,11 +38,14 @@ const Navbar = ({ isAuthenticated }) => {
         <HStack spacing={2} alignItems={"center"}>
           <Input placeholder="Password" />
           <Button>Log In</Button>
-          <Link to={"/create"}>
-            <Button>
-              <PlusSquareIcon fontSize={20} />
-            </Button>
-          </Link>
+          {isAuthenticated && (
+            <Link to={"/create"}>
+              <Button>
+                <PlusSquareIcon fontSize={20} />
+              </Button>
+            </Link>
+          )}
+
           <Button onClick={toggleColorMode}>
             {colorMode === "light" ? <IoMoon /> : <LuSun size="20" />}
           </Button>
