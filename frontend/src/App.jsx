@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Box minH={"100vh"} bg={useColorModeValue("gray.100", "gray.900")}>
-      <Navbar />
+      <Navbar isAuthenticated={isAuthenticated} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
@@ -28,7 +28,10 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/recipePage/:id" element={<RecipePage />} />
+        <Route
+          path="/recipePage/:id"
+          element={<RecipePage isAuthenticated={isAuthenticated} />}
+        />
       </Routes>
       <Footer />
     </Box>
