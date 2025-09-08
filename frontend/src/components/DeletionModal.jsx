@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-const ConfirmationModal = ({ isOpen, onClose, onConfirm }) => {
+const DeletionModal = ({ isOpen, onClose, onConfirm }) => {
   const cancelRef = React.useRef();
   return (
     <AlertDialog
@@ -34,4 +34,4 @@ const ConfirmationModal = ({ isOpen, onClose, onConfirm }) => {
   );
 };
 
-export default ConfirmationModal;
+export default DeletionModal;

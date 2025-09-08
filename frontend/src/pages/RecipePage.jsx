@@ -24,7 +24,7 @@ import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useRecipeStore } from "../store/recipe";
 import { useState } from "react";
-import DeletionModal from "../components/ConfirmationModal";
+import DeletionModal from "../components/DeletionModal";
 
 const RecipePage = ({ isAuthenticated }) => {
   const recipe = useLocation().state;
