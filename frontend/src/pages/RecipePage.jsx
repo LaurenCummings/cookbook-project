@@ -19,6 +19,7 @@ import {
   useDisclosure,
   Input,
   Textarea,
+  Link,
 } from "@chakra-ui/react";
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -152,6 +153,14 @@ const RecipePage = ({ isAuthenticated }) => {
               </Text>
             ))}
           </Container>
+        )}
+        {updatedRecipe.source && (
+          <Text>
+            Source:{" "}
+            <Link href={updatedRecipe.source} isExternal>
+              {updatedRecipe.source}
+            </Link>
+          </Text>
         )}
       </VStack>
 
