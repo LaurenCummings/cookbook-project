@@ -9,5 +9,11 @@ export const login = (req, res) => {
       return res.status(400).json({ message: "Invalid credentials" });
     }
     generateToken();
-  } catch (error) {}
+    res.status(200);
+  } catch (error) {
+    console.log("Error in login controller", error.message);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 };
+
+export const logout = (req, res) => {};
