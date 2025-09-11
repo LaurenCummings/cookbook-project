@@ -1,9 +1,7 @@
 import jwt from "jsonwebtoken";
 
 export const generateToken = (res) => {
-  const token = jwt.sign(process.env.USER_ID, process.env.JWT_SECRET, {
-    expiresIn: "7d",
-  });
+  const token = jwt.sign(process.env.USER_ID, process.env.JWT_SECRET);
 
   res.cookie("jwt", token, {
     maxAge: 7 * 24 * 60 * 60 * 1000,
