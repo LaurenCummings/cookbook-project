@@ -8,7 +8,7 @@ export const login = (req, res) => {
     if (!isPasswordCorrect) {
       return res.status(400).json({ message: "Invalid credentials" });
     }
-    generateToken();
+    generateToken(res);
     res.status(200).json({ message: "Login successful" });
   } catch (error) {
     console.log("Error in login controller", error.message);
