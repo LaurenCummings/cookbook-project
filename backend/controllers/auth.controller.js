@@ -9,7 +9,7 @@ export const login = (req, res) => {
       return res.status(400).json({ message: "Invalid credentials" });
     }
     generateToken();
-    res.status(200);
+    res.status(200).json({ message: "Login successful" });
   } catch (error) {
     console.log("Error in login controller", error.message);
     res.status(500).json({ message: "Internal Server Error" });
