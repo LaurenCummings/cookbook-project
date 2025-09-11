@@ -4,6 +4,7 @@ import path from "path";
 import { connectDB } from "./config/db.js";
 
 import recipeRoutes from "./routes/recipe.route.js";
+import authRoutes from "./routes/auth.route.js";
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ const __dirname = path.resolve();
 
 app.use(express.json());
 
+app.use("/api/auth", authRoutes);
 app.use("/api/recipes", recipeRoutes);
 
 if (process.env.NODE_ENV === "production") {
