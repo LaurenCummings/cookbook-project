@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { axiosInstance } from "../lib/axios.js";
-import { toastStore, useToast } from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 
 export const useAuthStore = create((set, get) => ({
   isLoggingIn: false,

@@ -11,9 +11,17 @@ import { Link } from "react-router-dom";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
+import { useAuthStore } from "../store/useAuthStore";
 
 const Navbar = ({ isAuthenticated }) => {
   const { colorMode, toggleColorMode } = useColorMode();
+
+  const { login, isLoggingIn } = useAuthStore();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    login(formData);
+  };
 
   return (
     <Container maxW={"1140px"} px={4}>
@@ -37,7 +45,7 @@ const Navbar = ({ isAuthenticated }) => {
 
         <HStack spacing={2} alignItems={"center"}>
           <Input placeholder="Password" />
-          <Button>Log In</Button>
+          <Button onClick={handleSubmit}>Log In</Button>
           {isAuthenticated && (
             <Link to={"/create"}>
               <Button>
