@@ -11,16 +11,18 @@ import { Link } from "react-router-dom";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
+import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 
 const Navbar = ({ isAuthenticated }) => {
+  const [enteredPassword, setEnteredPassword] = useState({ password: "" });
   const { colorMode, toggleColorMode } = useColorMode();
 
   const { login, isLoggingIn } = useAuthStore();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    login({ password: "password" });
+    login({ password: "password1" });
   };
 
   return (
