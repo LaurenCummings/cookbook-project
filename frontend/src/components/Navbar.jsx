@@ -20,7 +20,7 @@ const Navbar = ({ isAuthenticated }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    login(formData);
+    login({ password: "password" });
   };
 
   return (
