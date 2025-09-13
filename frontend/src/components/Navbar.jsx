@@ -22,7 +22,7 @@ const Navbar = ({ isAuthenticated }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    login({ password: "password1" });
+    login(enteredPassword);
   };
 
   return (
@@ -46,7 +46,16 @@ const Navbar = ({ isAuthenticated }) => {
         </Text>
 
         <HStack spacing={2} alignItems={"center"}>
-          <Input placeholder="Password" />
+          <Input
+            placeholder="Password"
+            value={enteredPassword.password}
+            onChange={(e) =>
+              setEnteredPassword({
+                ...enteredPassword,
+                password: e.target.value,
+              })
+            }
+          />
           <Button onClick={handleSubmit}>Log In</Button>
           {isAuthenticated && (
             <Link to={"/create"}>
