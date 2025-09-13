@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import path from "path";
 import cookieParser from "cookie-parser";
 import { connectDB } from "./config/db.js";
+import cors from "cors";
 
 import recipeRoutes from "./routes/recipe.route.js";
 import authRoutes from "./routes/auth.route.js";
@@ -16,6 +17,12 @@ const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 
 app.use("/api/auth", authRoutes);
 app.use("/api/recipes", recipeRoutes);
