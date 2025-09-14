@@ -14,7 +14,7 @@ import { LuSun } from "react-icons/lu";
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 
-const Navbar = ({ isAuthenticated }) => {
+const Navbar = () => {
   const [enteredPassword, setEnteredPassword] = useState({ password: "" });
   const { colorMode, toggleColorMode } = useColorMode();
 

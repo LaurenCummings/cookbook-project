@@ -27,7 +27,7 @@ import { useRecipeStore } from "../store/recipe";
 import { useState } from "react";
 import DeletionModal from "../components/DeletionModal";
 
-const RecipePage = ({ isAuthenticated }) => {
+const RecipePage = () => {
   const recipe = useLocation().state;
   const [updatedRecipe, setUpdatedRecipe] = useState(recipe);
   const { deleteRecipe, updateRecipe } = useRecipeStore();
