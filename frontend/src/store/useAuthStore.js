@@ -3,7 +3,9 @@ import { axiosInstance } from "../lib/axios.js";
 import { useToast } from "@chakra-ui/react";
 
 export const useAuthStore = create((set, get) => ({
+  authUser: false,
   isLoggingIn: false,
+  isCheckingAuth: true,
 
   login: async (data) => {
     set({ isLoggingIn: true });
