@@ -46,17 +46,22 @@ const Navbar = () => {
         </Text>
 
         <HStack spacing={2} alignItems={"center"}>
-          <Input
-            placeholder="Password"
-            value={enteredPassword.password}
-            onChange={(e) =>
-              setEnteredPassword({
-                ...enteredPassword,
-                password: e.target.value,
-              })
-            }
-          />
-          <Button onClick={handleSubmit}>Log In</Button>
+          {!authUser && (
+            <HStack spacing={2} alignItem={"center"}>
+              <Input
+                placeholder="Password"
+                value={enteredPassword.password}
+                onChange={(e) =>
+                  setEnteredPassword({
+                    ...enteredPassword,
+                    password: e.target.value,
+                  })
+                }
+              />
+              <Button onClick={handleSubmit}>Log In</Button>
+            </HStack>
+          )}
+
           {authUser && (
             <Link to={"/create"}>
               <Button>
