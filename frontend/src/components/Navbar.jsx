@@ -18,7 +18,7 @@ const Navbar = () => {
   const [enteredPassword, setEnteredPassword] = useState({ password: "" });
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const { login, isLoggingIn } = useAuthStore();
+  const { login, isLoggingIn, authUser } = useAuthStore();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -57,7 +57,7 @@ const Navbar = () => {
             }
           />
           <Button onClick={handleSubmit}>Log In</Button>
-          {isAuthenticated && (
+          {authUser && (
             <Link to={"/create"}>
               <Button>
                 <PlusSquareIcon fontSize={20} />
