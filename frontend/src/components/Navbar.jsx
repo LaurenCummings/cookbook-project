@@ -62,6 +62,8 @@ const Navbar = () => {
             </HStack>
           )}
 
+          {authUser && <Button>Log Out</Button>}
+
           {authUser && (
             <Link to={"/create"}>
               <Button>
