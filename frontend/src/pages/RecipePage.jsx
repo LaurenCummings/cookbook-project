@@ -26,11 +26,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useRecipeStore } from "../store/recipe";
 import { useState } from "react";
 import DeletionModal from "../components/DeletionModal";
+import { useAuthStore } from "../store/useAuthStore";
 
 const RecipePage = () => {
   const recipe = useLocation().state;
   const [updatedRecipe, setUpdatedRecipe] = useState(recipe);
   const { deleteRecipe, updateRecipe } = useRecipeStore();
+  const { authUser } = useAuthStore();
   const navigate = useNavigate();
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -87,7 +89,7 @@ const RecipePage = () => {
 
   return (
     <Box maxW={"lg"} m={"auto"}>
-      {isAuthenticated && (
+      {authUser && (
         <HStack spacing={2} justifyContent={"flex-end"}>
           <IconButton
             icon={<EditIcon />}
