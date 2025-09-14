@@ -23,6 +23,7 @@ export const useAuthStore = create((set, get) => ({
     set({ isLoggingIn: true });
     try {
       const res = await axiosInstance.post("/auth/login", data);
+      set({ authUser: true });
       console.log("Logged in");
     } catch (error) {
       console.log(error.response.data.message);
