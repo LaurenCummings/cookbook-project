@@ -18,11 +18,16 @@ const Navbar = () => {
   const [enteredPassword, setEnteredPassword] = useState({ password: "" });
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const { login, isLoggingIn, authUser } = useAuthStore();
+  const { login, logout, isLoggingIn, authUser } = useAuthStore();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     login(enteredPassword);
+  };
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    logout();
   };
 
   return (
