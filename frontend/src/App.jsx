@@ -11,6 +11,10 @@ import { useAuthStore } from "./store/useAuthStore";
 function App() {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
 
+  useEffect(() => {
+    checkAuth();
+  }, [checkAuth]);
+
   return (
     <Box minH={"100vh"} bg={useColorModeValue("gray.100", "gray.900")}>
       <Navbar />
