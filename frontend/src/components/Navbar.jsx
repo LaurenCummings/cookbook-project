@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const { login, isLoggingIn, authUser } = useAuthStore();
 
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     login(enteredPassword);
   };
@@ -58,7 +58,7 @@ const Navbar = () => {
                   })
                 }
               />
-              <Button onClick={handleSubmit}>Log In</Button>
+              <Button onClick={handleLogin}>Log In</Button>
             </HStack>
           )}
 
