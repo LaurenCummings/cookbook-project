@@ -52,7 +52,7 @@ const Navbar = () => {
 
         <HStack spacing={2} alignItems={"center"}>
           {!authUser && (
-            <HStack spacing={2} alignItem={"center"}>
+            <HStack spacing={2} alignItems={"center"}>
               <Input
                 placeholder="Password"
                 value={enteredPassword.password}
