@@ -1,6 +1,5 @@
 import { create } from "zustand";
 import { axiosInstance } from "../lib/axios.js";
-import { useToast } from "@chakra-ui/react";
 
 export const useAuthStore = create((set, get) => ({
   authUser: false,
@@ -24,7 +23,6 @@ export const useAuthStore = create((set, get) => ({
     try {
       const res = await axiosInstance.post("/auth/login", data);
       set({ authUser: true });
-      console.log("Logged in");
     } catch (error) {
       console.log(error.response.data.message);
     } finally {
