@@ -2,7 +2,7 @@ import { Text } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Text textAlign={"center"} mt={20} mb={10}>
+    <Text textAlign={"center"} mt={20} pb={10}>
       <a target="_blank" href="https://icons8.com/icon/JlAUuOdwMf2P/whisk">
         Whisk
       </a>{" "}
