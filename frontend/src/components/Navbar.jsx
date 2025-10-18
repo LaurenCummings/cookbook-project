@@ -16,6 +16,7 @@ import { useAuthStore } from "../store/useAuthStore";
 
 const Navbar = () => {
   const [enteredPassword, setEnteredPassword] = useState({ password: "" });
+  const [showPassword, setShowPassword] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
 
   const { login, logout, isLoggingIn, authUser } = useAuthStore();
