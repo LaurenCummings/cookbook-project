@@ -55,7 +55,8 @@ const Navbar = () => {
           {!authUser && (
             <HStack spacing={2} alignItems={"center"}>
               <Input
-                placeholder="Password"
+                type={showPassword ? "text" : "password"}
+                placeholder="••••••••"
                 value={enteredPassword.password}
                 onChange={(e) =>
                   setEnteredPassword({
