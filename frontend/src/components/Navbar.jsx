@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
-import { LuSun } from "react-icons/lu";
+import { LuSun, LuEye, LuEyeOff } from "react-icons/lu";
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 
