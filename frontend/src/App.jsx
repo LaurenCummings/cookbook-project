@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import { useEffect } from "react";
 import { useAuthStore } from "./store/useAuthStore";
 import { Spinner } from "@chakra-ui/icons";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
@@ -30,6 +31,8 @@ function App() {
         <Route path="/recipePage/:id" element={<RecipePage />} />
       </Routes>
       <Footer />
+
+      <Toaster />
     </Box>
   );
 }
