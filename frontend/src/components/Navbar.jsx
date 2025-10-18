@@ -65,6 +65,13 @@ const Navbar = () => {
                   })
                 }
               />
+              <Button onClick={() => setShowPassword(!showPassword)}>
+                {showPassword ? (
+                  <LuEye size={30} />
+                ) : (
+                  <LuEyeOff size={30} />
+                )}
+              </Button>
               <Button onClick={handleLogin}>Log In</Button>
             </HStack>
           )}
