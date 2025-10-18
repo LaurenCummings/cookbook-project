@@ -24,6 +24,7 @@ const Navbar = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     login(enteredPassword);
+    setEnteredPassword("");
   };
 
   const handleLogout = async (e) => {
