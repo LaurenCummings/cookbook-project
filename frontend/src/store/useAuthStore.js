@@ -25,7 +25,6 @@ export const useAuthStore = create((set, get) => ({
       const res = await axiosInstance.post("/auth/login", data);
       set({ authUser: true });
       toast.success("Logged in successfully");
-      console.log("Logged in successfully");
     } catch (error) {
       console.log(error.response.data.message);
     } finally {
@@ -37,7 +36,7 @@ export const useAuthStore = create((set, get) => ({
     try {
       await axiosInstance.post("/auth/logout");
       set({ authUser: false });
-      console.log("Logged out successfully");
+      toast.success("Logged out successfully")
     } catch (error) {
       console.log(error.response.data.message);
     }
