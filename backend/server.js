@@ -8,6 +8,9 @@ import cors from "cors";
 import recipeRoutes from "./routes/recipe.route.js";
 import authRoutes from "./routes/auth.route.js";
 
+import job from './cron.js';
+
+
 dotenv.config();
 
 const app = express();
