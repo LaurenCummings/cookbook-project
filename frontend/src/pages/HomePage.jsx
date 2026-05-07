@@ -4,16 +4,6 @@ import { Link } from "react-router-dom";
 import { useRecipeStore } from "../store/recipe";
 import RecipeCard from "../components/RecipeCard";
 
-// const categories = createListCollection({
-//   items: [
-//     { label: "Desserts", value: "desserts" },
-//     { label: "Breakfast", value: "breakfast" },
-//     { label: "Condiments", value: "condiments" },
-//     { label: "Dinner", value: "dinner" },
-//     { label: "Appetizer", value: "appetizer" },
-//   ],
-// })
-
 const HomePage = () => {
   const { fetchRecipes, recipes } = useRecipeStore();
 
