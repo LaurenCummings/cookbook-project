@@ -14,6 +14,7 @@ const HomePage = () => {
   return (
     <Container maxW="container.xl" py={12}>
       <VStack spacing={8}>
+        <Text>Filter by Category</Text>
         <SimpleGrid
           columns={{
             base: 1,
