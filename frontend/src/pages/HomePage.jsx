@@ -24,7 +24,9 @@ const HomePage = () => {
   return (
     <Container maxW="container.xl" py={12}>
       <VStack spacing={8}>
-
+        <Select placeholder="Select category">
+          <option value="desserts">Desserts</option>
+        </Select>
         <SimpleGrid
           columns={{
             base: 1,
