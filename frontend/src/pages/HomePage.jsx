@@ -15,11 +15,11 @@ const HomePage = () => {
     <Container maxW="container.xl" py={12}>
       <VStack spacing={8}>
         <Select placeholder="Select category">
-          <option value="dessert">Dessert</option>
           <option value="breakfast">Breakfast</option>
-          <option value="condiments">Condiments</option>
           <option value="dinner">Dinner</option>
-          <option value="appetizer">Appetizer</option>
+          <option value="dessert">Dessert</option>
+          <option value="appetizers">Appetizers</option>
+          <option value="condiments">Condiments</option>
         </Select>
         <SimpleGrid
           columns={{
