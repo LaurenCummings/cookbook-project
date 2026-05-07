@@ -6,7 +6,11 @@ import RecipeCard from "../components/RecipeCard";
 
 const categories = createListCollection({
   items: [
-    { label: "Cookies", value: "cookies" },
+    { label: "Desserts", value: "desserts" },
+    { label: "Breakfast", value: "breakfast" },
+    { label: "Condiments", value: "condiments" },
+    { label: "Dinner", value: "dinner" },
+    { label: "Appetizer", value: "appetizer" },
   ],
 })
 
