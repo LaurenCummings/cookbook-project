@@ -24,30 +24,7 @@ const HomePage = () => {
   return (
     <Container maxW="container.xl" py={12}>
       <VStack spacing={8}>
-        <Select.Root
-          collection={categories}
-          size="sm"
-          width="320px"
-        >
-          <Select.HiddenSelect />
-          <Select.Label>Filter by Category</Select.Label>
-          <Select.Control>
-            <Select.Trigger>
-              <Select.ValueText placeholder="Select category" />  
-            </Select.Trigger>
-          </Select.Control>
-          <Portal>
-            <Select.Positioner>
-              <Select.Content>
-                { categories.items.map((category) => (
-                  <Select.Item item={category} key={category.value}>
-                    {category.label}
-                  </Select.Item>
-                ))}
-              </Select.Content>
-            </Select.Positioner>
-          </Portal>
-        </Select.Root>
+
         <SimpleGrid
           columns={{
             base: 1,
