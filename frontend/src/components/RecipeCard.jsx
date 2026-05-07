@@ -24,7 +24,7 @@ const RecipeCard = ({ recipe }) => {
         />
         <Box p={4} bg={bg}>
           <Heading as="h3" size="md" mb={2}>
-            {recipe.name}
+            {recipe.dishType}
           </Heading>
         </Box>
       </Box>
