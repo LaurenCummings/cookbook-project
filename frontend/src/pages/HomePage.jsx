@@ -35,7 +35,7 @@ const HomePage = () => {
           w={"full"}
           mt={10}
         >
-          {recipes.map((recipe) => (
+          {filteredRecipes.map((recipe) => (
             <RecipeCard key={recipe._id} recipe={recipe} />
           ))}
         </SimpleGrid>
