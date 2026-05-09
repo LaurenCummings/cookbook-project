@@ -8,6 +8,8 @@ const HomePage = () => {
   const { fetchRecipes, recipes } = useRecipeStore();
   const [category, setCategory] = useState("all");
 
+  const filteredRecipes = category === "all" ? recipes : recipes.filter(recipe => recipe.category === category);
+
   useEffect(() => {
     fetchRecipes();
   }, [fetchRecipes]);
