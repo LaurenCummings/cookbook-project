@@ -15,6 +15,7 @@ const HomePage = () => {
     <Container maxW="container.xl" py={12}>
       <VStack spacing={8}>
         <Select placeholder="Select category">
+          <option value="all">All</option>
           <option value="breakfast">Breakfast</option>
           <option value="dinner">Dinner</option>
           <option value="dessert">Dessert</option>
