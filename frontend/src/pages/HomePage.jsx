@@ -17,7 +17,7 @@ const HomePage = () => {
   return (
     <Container maxW="container.xl" py={12}>
       <VStack spacing={8}>
-        <Select placeholder="Select category">
+        <Select value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Select category">
           <option value="all">All</option>
           <option value="breakfast">Breakfast</option>
           <option value="dinner">Dinner</option>
