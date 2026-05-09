@@ -22,8 +22,8 @@ const HomePage = () => {
           <option value="breakfast">Breakfast</option>
           <option value="dinner">Dinner</option>
           <option value="dessert">Dessert</option>
-          <option value="appetizer">Appetizers</option>
-          <option value="condiment">Condiments</option>
+          <option value="appetizers">Appetizers</option>
+          <option value="condiments">Condiments</option>
         </Select>
         <SimpleGrid
           columns={{
