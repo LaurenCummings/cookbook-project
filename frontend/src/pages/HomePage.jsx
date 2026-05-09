@@ -23,6 +23,7 @@ const HomePage = () => {
           <option value="dinner">Dinner</option>
           <option value="dessert">Dessert</option>
           <option value="bread">Bread</option>
+          <option value="fillings">Pastry fillings and spreads</option>
           <option value="condiments">Condiments</option>
         </Select>
         <SimpleGrid
