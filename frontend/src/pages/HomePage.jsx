@@ -6,6 +6,7 @@ import RecipeCard from "../components/RecipeCard";
 
 const HomePage = () => {
   const { fetchRecipes, recipes } = useRecipeStore();
+  const [category, setCategory] = useState("all");
 
   useEffect(() => {
     fetchRecipes();
