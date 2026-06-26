@@ -41,6 +41,7 @@ const RecipePage = () => {
   const handleDeleteClick = () => {
     deletionModalDisclosure.onOpen();
   };
+  
 
   const handleDeleteRecipe = async (rid) => {
     const { success, message } = await deleteRecipe(rid);
