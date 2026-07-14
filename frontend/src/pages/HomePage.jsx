@@ -23,6 +23,7 @@ const HomePage = () => {
           <option value="dinner">Dinner</option>
           <option value="dessert">Dessert</option>
           <option value="bread">Bread</option>
+          <option value="appetizer">Appetizers</option>
           <option value="fillings">Pastry Fillings</option>
           <option value="shells">Pastry Shells</option>
           <option value="condiments">Condiments</option>
